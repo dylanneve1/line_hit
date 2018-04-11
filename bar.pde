@@ -8,7 +8,7 @@ class Bar {
   }
   
   void show() {
-    fill(0);
+    fill(255);
     rectMode(CENTER);
     rect(x, y, displayWidth, displayHeight*0.1);
   }
