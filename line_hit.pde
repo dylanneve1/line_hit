@@ -9,4 +9,5 @@ void setup() {
 
 void main() {
   background(0);
+  bar.call();
 }
