@@ -6,11 +6,19 @@ class Ball {
   
   void call() {
     show();
+    move();
   }
   
   void show() {
     fill(200, 0, 0);
     ellipseMode(CENTER);
     ellipse(x, y, w, w);
+  }
+  
+  void move() {
+    y = y + displayHeight*0.01;
+    if(y > displayHeight) {
+      y = displayHeight*-0.5;
+    }
   }
 }
