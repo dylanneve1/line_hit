@@ -10,4 +10,5 @@ void setup() {
 void draw() {
   background(0);
   bar.call();
+  ball.call();
 }
