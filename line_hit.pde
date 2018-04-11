@@ -16,6 +16,6 @@ void draw() {
   ball.call();
   fill(255);
   textAlign(CENTER);
-  textSize(displayWidth*0.01);
+  textSize(displayWidth*0.1);
   text(score, displayWidth/2, displayHeight/6);
 }

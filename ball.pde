@@ -7,6 +7,7 @@ class Ball {
   void call() {
     show();
     move();
+    getOne();
   }
 
   void show() {
@@ -19,6 +20,15 @@ class Ball {
     y = y + displayHeight*0.01;
     if (y > displayHeight) {
       y = displayHeight*-0.5;
+    }
+  }
+
+  void getOne() {
+    if (bar.hit == false) {
+      if (mousePressed && y > bar.y - bar.h && y < bar.y + bar.h) {
+        score += 1;
+        bar.hit = true;
+      }
     }
   }
 }
