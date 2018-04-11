@@ -4,6 +4,7 @@ Bar bar;
 int score = 0;
 
 void setup() {
+  orientation(PORTRAIT);
   bar = new Bar();
   ball = new Ball();
   size(displayWidth, displayHeight, P2D);
