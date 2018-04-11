@@ -1,7 +1,7 @@
 class Bar {
   
   float x = displayWidth/2;
-  float y;
+  float y = displayHeight/2;
   
   void call() {
     show();
