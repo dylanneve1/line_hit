@@ -2,11 +2,11 @@ class Bar {
 
   float x = displayWidth/2;
   float y = displayHeight/2;
-  
+
   boolean hit = false;
-  
+
   float h = displayHeight*0.1;
- 
+
   void call() {
     show();
     respawn();
@@ -17,11 +17,13 @@ class Bar {
     rectMode(CENTER);
     rect(x, y, displayWidth, h);
   }
-  
+
   void respawn() {
-    if(hit == true) {
-      y = random(0, displayHeight);
-      hit = false;
+    if (ball.y < 0) {
+      if (hit == true) {
+        y = random(displayHeight/5, displayHeight);
+        hit = false;
+      }
     }
   }
 }
