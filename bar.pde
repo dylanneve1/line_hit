@@ -20,10 +20,7 @@ class Bar {
 
   void respawn() {
     if (ball.y < 0) {
-      if (hit == true) {
-        y = random(displayHeight/5, displayHeight);
-        hit = false;
-      }
+      y = barHandler.barRespawnEvent(hit, y);
     }
   }
 }

@@ -2,6 +2,7 @@ Ball ball;
 ballHandler ballHandler;
 Bar bar;
 barHandler barHandler;
+Handler handler;
 
 int score = 0;
 
@@ -11,6 +12,7 @@ void setup() {
   barHandler = new barHandler();
   ball = new Ball();
   ballHandler = new ballHandler();
+  handler = new Handler();
   size(displayWidth, displayHeight, P2D);
 }
 
