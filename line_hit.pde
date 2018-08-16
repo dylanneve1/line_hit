@@ -1,12 +1,16 @@
 Ball ball;
+ballHandler ballHandler;
 Bar bar;
+barHandler barHandler;
 
 int score = 0;
 
 void setup() {
   orientation(PORTRAIT);
   bar = new Bar();
+  barHandler = new barHandler();
   ball = new Ball();
+  ballHandler = new ballHandler();
   size(displayWidth, displayHeight, P2D);
 }
 
