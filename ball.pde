@@ -4,9 +4,12 @@ class Ball {
   float y = displayHeight*-0.5;
   float w = displayWidth*0.1;
 
+  boolean pressedBefore = false;
+
   void call() {
     show();
     move();
+    wasPressedBefore();
     getOne();
   }
 
@@ -23,8 +26,14 @@ class Ball {
     }
   }
 
+  void wasPressedBefore() {
+    if(mousePressed && ballHandler.collided() == false) {
+      pressedBefore = true;
+    }
+  }
+
   void getOne() {
-    if (bar.hit == false) {
+    if (bar.hit == false && pressedBefore == false) {
       ballHandler.getOneEvent(y);
     }
   }

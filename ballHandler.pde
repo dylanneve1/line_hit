@@ -6,4 +6,12 @@ class ballHandler {
       bar.hit = true;
     }
   }
+  
+  boolean collided() {
+    if (ball.y > bar.y - bar.h && ball.y < bar.y + bar.h) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
