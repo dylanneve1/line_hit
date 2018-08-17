@@ -3,7 +3,7 @@ class Bar {
   float x = displayWidth/2;
   float y = displayHeight/2;
 
-  boolean hit = true;
+  boolean hit = false;
 
   float h = displayHeight*0.1;
 
@@ -21,6 +21,6 @@ class Bar {
   void respawn() {
     if (ball.y < 0) {
       y = barHandler.barRespawnEvent(hit, y);
-;    }
+    }
   }
 }
