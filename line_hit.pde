@@ -3,6 +3,7 @@ ballHandler ballHandler;
 Bar bar;
 barHandler barHandler;
 Handler handler;
+Menus menus;
 
 int score = 0;
 
@@ -13,15 +14,10 @@ void setup() {
   ball = new Ball();
   ballHandler = new ballHandler();
   handler = new Handler();
+  menus = new Menus();
   size(displayWidth, displayHeight, P2D);
 }
 
 void draw() {
-  background(0);
-  bar.call();
-  ball.call();
-  fill(255);
-  textAlign(CENTER);
-  textSize(displayWidth*0.1);
-  text(score, displayWidth/2, displayHeight/6);
+  menus.call();
 }
