@@ -4,23 +4,32 @@ class Bar {
   float y = displayHeight/2;
 
   boolean hit = false;
+  boolean shrink = false;
 
   float h = displayHeight*0.1;
+  float w = displayWidth;
 
   void call() {
     show();
     respawn();
+    isShrink();
   }
 
   void show() {
     fill(255);
     rectMode(CENTER);
-    rect(x, y, displayWidth, h);
+    rect(x, y, w, h);
   }
 
   void respawn() {
     if (ball.y < 0) {
       y = barHandler.barRespawnEvent(hit, y);
+    }
+  }
+  
+  void isShrink() {
+    if(shrink == true) {
+      barHandler.shrinkEvent();
     }
   }
 }
