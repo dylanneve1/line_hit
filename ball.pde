@@ -4,8 +4,6 @@ class Ball {
   float y = displayHeight*-0.5;
   float w = displayWidth*0.1;
 
-  boolean pressedBefore = false;
-
   void call() {
     show();
     move();

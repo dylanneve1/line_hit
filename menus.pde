@@ -5,15 +5,9 @@ class Menus {
   boolean deathScreenShow = false;
 
   void call() {
-    if (startScreenShow) {
-      startScreen();
-    }
-    if (gameScreenShow) {
-      gameScreen();
-    }
-    if (deathScreenShow) {
-      deathScreen();
-    }
+    if (startScreenShow) { startScreen(); }
+    if (gameScreenShow) { gameScreen(); }
+    if (deathScreenShow) { deathScreen(); }
   }
 
   void startScreen() {

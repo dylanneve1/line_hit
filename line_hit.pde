@@ -21,7 +21,3 @@ void setup() {
 void draw() {
   menus.call();
 }
-
-void mouseReleased() {
-  ball.pressedBefore = false;
-}

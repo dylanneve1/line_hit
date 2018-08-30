@@ -28,7 +28,7 @@ class Bar {
   }
   
   void isShrink() {
-    if(shrink == true) {
+    if(shrink) {
       barHandler.shrinkEvent();
     }
   }
