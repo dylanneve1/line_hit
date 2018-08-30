@@ -26,7 +26,7 @@ class Ball {
   }
 
   void scoreChecker() {
-    if (mousePressedInRange() == true && ballHandler.collided() == false) {
+    if (mousePressedInRange() == true && ballHandler.collided() == false && bar.hit == false) {
       ballHandler.deadEvent();
     } else if (mousePressedInRange() == true && ballHandler.collided() == true && bar.hit == false) {
       ballHandler.getOneEvent(y);

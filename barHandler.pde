@@ -5,7 +5,7 @@ class barHandler {
       y = random(displayHeight/5, displayHeight);
       System.out.println("Respawned");
     } else if (hit == false) {
-      handler.gameOverEvent();
+      ballHandler.deadEvent();
     }
     bar.hit = false;
     bar.shrink = false;

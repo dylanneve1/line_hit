@@ -21,7 +21,8 @@ class Menus {
     fill(255);
     textAlign(CENTER);
     textSize(displayWidth*0.1);
-    text("Tap here to start" , displayWidth/2, displayHeight/6);
+    text("START" , displayWidth/2, displayHeight/4);
+    text("Line Hit" , displayWidth/2, (displayHeight/4)*3);;
     if(mousePressed && mouseY < displayHeight/2) {
       startScreenShow = false;
       gameScreenShow = true;
@@ -43,6 +44,10 @@ class Menus {
     fill(255);
     textAlign(CENTER);
     textSize(displayWidth*0.1);
-    text("Dead" , displayWidth/2, displayHeight/6);
+    text("RESTART" , displayWidth/2, displayHeight/4);
+    text("You have died." , displayWidth/2, (displayHeight/4)*3);
+    if(mousePressed && mouseY < displayHeight/2) {
+      handler.restart();
+    }
   }
 }
