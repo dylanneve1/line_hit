@@ -2,6 +2,7 @@ class Menus {
 
   boolean startScreenShow = true;
   boolean gameScreenShow = false;
+  boolean deathScreenShow = false;
 
   void call() {
     if (startScreenShow) {
@@ -10,6 +11,9 @@ class Menus {
     if (gameScreenShow) {
       gameScreen();
     }
+    if (deathScreenShow) {
+      deathScreen();
+    }
   }
 
   void startScreen() {
@@ -17,8 +21,8 @@ class Menus {
     fill(255);
     textAlign(CENTER);
     textSize(displayWidth*0.1);
-    text("Tap to start" , displayWidth/2, displayHeight/6);
-    if(mousePressed) {
+    text("Tap here to start" , displayWidth/2, displayHeight/6);
+    if(mousePressed && mouseY < displayHeight/2) {
       startScreenShow = false;
       gameScreenShow = true;
     }
@@ -32,5 +36,13 @@ class Menus {
     textAlign(CENTER);
     textSize(displayWidth*0.1);
     text(score, displayWidth/2, displayHeight/6);
+  }
+  
+  void deathScreen() {
+    background(200, 0, 0);
+    fill(255);
+    textAlign(CENTER);
+    textSize(displayWidth*0.1);
+    text("Dead" , displayWidth/2, displayHeight/6);
   }
 }

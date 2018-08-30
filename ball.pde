@@ -9,8 +9,7 @@ class Ball {
   void call() {
     show();
     move();
-    wasPressedBefore();
-    getOne();
+    scoreChecker();
   }
 
   void show() {
@@ -26,15 +25,17 @@ class Ball {
     }
   }
 
-  void wasPressedBefore() {
-    if(mousePressed && ballHandler.collided() == false) {
-      pressedBefore = true;
-    }
-  }
-
-  void getOne() {
-    if (bar.hit == false && pressedBefore == false) {
+  void scoreChecker() {
+    if (mousePressedInRange() == true && ballHandler.collided() == false) {
+      ballHandler.deadEvent();
+    } else if (mousePressedInRange() == true && ballHandler.collided() == true && bar.hit == false) {
       ballHandler.getOneEvent(y);
     }
+  }
+  
+  boolean mousePressedInRange() {
+    if(mousePressed && mouseY > displayHeight/2) {
+      return true;
+    } else return false;
   }
 }

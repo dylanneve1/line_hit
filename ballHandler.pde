@@ -8,6 +8,11 @@ class ballHandler {
     }
   }
   
+  void deadEvent() {
+    menus.gameScreenShow = false;
+    menus.deathScreenShow = true;
+  }
+  
   boolean collided() {
     if (ball.y > bar.y - bar.h && ball.y < bar.y + bar.h) {
       return true;
