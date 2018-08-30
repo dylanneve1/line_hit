@@ -20,9 +20,6 @@ class Ball {
 
   void move() {
     y = y + displayHeight*0.01;
-    if (y > displayHeight) {
-      y = displayHeight*-0.5;
-    }
   }
 
   void scoreChecker() {

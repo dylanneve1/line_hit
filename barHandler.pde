@@ -2,6 +2,7 @@ class barHandler {
 
   float barRespawnEvent(boolean hit, float y) {
     if (hit == true) {
+      ball.y = displayHeight*-0.5;
       y = random(displayHeight/5, displayHeight);
       System.out.println("Respawned");
     } else if (hit == false) {
@@ -11,7 +12,6 @@ class barHandler {
     bar.shrink = false;
     bar.h = displayHeight*0.1;
     bar.w = displayWidth;
-
     return y;
   }
 

@@ -22,7 +22,7 @@ class Bar {
   }
 
   void respawn() {
-    if (ball.y < 0) {
+    if (ball.y > displayHeight) {
       y = barHandler.barRespawnEvent(hit, y);
     }
   }
