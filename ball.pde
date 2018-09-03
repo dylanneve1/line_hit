@@ -4,6 +4,9 @@ class Ball {
   float y = displayHeight*-0.5;
   float w = displayWidth*0.1;
 
+  float speed = displayHeight*0.01;
+  float speedIncrease = displayHeight*0.00001;
+
   void call() {
     show();
     move();
@@ -17,7 +20,8 @@ class Ball {
   }
 
   void move() {
-    y = y + displayHeight*0.01;
+    y += speed;
+    speed += speedIncrease;
   }
 
   void scoreChecker() {
